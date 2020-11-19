@@ -547,5 +547,9 @@ template {
   .logo {
     width: 99px;
   }
+  .navbar-top {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
