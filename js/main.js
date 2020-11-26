@@ -39,4 +39,4 @@ var reviewsSlider = new Swiper('.reviews-slider', {
 })
 
 //Parallax effect
-$('.parallax-window').parallax({imageSrc: '../img/newsletter-bg.jpeg'});
+$('.parallax-window').parallax({imageSrc: 'img/newsletter-bg.jpeg'});
