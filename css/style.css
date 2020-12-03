@@ -519,7 +519,6 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 23px;
   padding-bottom: 20px;
 }
 
