@@ -2001,6 +2001,12 @@ template {
     padding-top: 28px;
     padding-bottom: 28px;
   }
+  .navbar-bottom {
+    top: 74px;
+  }
+  .navbar__search {
+    width: 245px;
+  }
   .hotel__slider {
     margin-bottom: 20px;
   }
