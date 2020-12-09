@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=32c5cf2b-ab74-43e2-ad32-d9195076ab7a&lang=ru_RU">
   </script>
@@ -51,7 +52,7 @@
     <header class="navbar navbar__mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="#" class="logo" data-aos="fade-right">
             <img src="img/horizontal-logo.svg" 
             alt="Logo: Best Tour Plan" 
             class="logo__img">
@@ -177,7 +178,7 @@
         </div>
         <!-- /.hotel-info -->
         <div class="hotel-grid">
-          <div class="swiper-container hotel-slider hotel__slider">
+          <div class="swiper-container hotel-slider hotel__slider" data-aos="flip-left">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <div class="swiper-slide hotel-slider__item">
@@ -294,7 +295,7 @@
           </div>
           <!-- /.packages__card packages__card-big -->
 
-          <div class="packages__card">
+          <div class="packages__card" data-aos="fade-left">
             <span class="offer packages__offer">Flash Offer</span>
             <img src="img/package-2.jpg" alt="LUX* Belle Mare" class="packages__image">
             <div class="packages__info">
@@ -328,7 +329,7 @@
           </div>
           <!-- /.packages__card-->
 
-          <div class="packages__card">
+          <div class="packages__card" data-aos="fade-up" data-aos-delay="100">
             <span class="offer packages__offer">Flash Offer</span>
             <img src="img/package-3.jpg" alt="White Palace" class="packages__image">
             <div class="packages__info">
@@ -362,7 +363,7 @@
           </div>
           <!-- /.packages__card-->
 
-          <div class="packages__card">
+          <div class="packages__card" data-aos="fade-up" data-aos-delay="200">
             <span class="offer packages__offer">Flash Offer</span>
             <img src="img/package-4.jpg" alt="Luxury Place" class="packages__image">
             <div class="packages__info">
@@ -396,7 +397,7 @@
           </div>
           <!-- /.packages__card-->
 
-          <div class="packages__card">
+          <div class="packages__card" data-aos="fade-up" data-aos-delay="300">
             <span class="offer packages__offer">Flash Offer</span>
             <img src="img/package-5.jpg" alt="Hotel Five Star" class="packages__image">
             <div class="packages__info">
@@ -437,11 +438,11 @@
 
     <section class="newsletter parallax-window" data-parallax="scroll" data-image-src="img/newsletter-bg.jpeg">
       <div class="newsletter-wrapper">
-        <h2 class="newsletter-title newsletter__title">
+        <h2 class="newsletter-title newsletter__title" data-aos="fade-right">
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
+        <form action="send.php" method="POST" class="subscribe newsletter__subscribe" data-aos="fade-left">
           <input type="email" class="subscribe__input" placeholder="Your email address" name="subscribe_email" required/>
           <button class="subscribe__button">
             Send
@@ -588,26 +589,26 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div class="card activities__card" data-aos="fade-right" data-aos-delay="200">
             <img src="img/activity-1.jpeg" alt="The curious corner
             of chamarel" class="card__image">
             <h3 class="card__title">The curious corner of chamarel</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /card -->
-          <div class="card activities__card">
+          <div class="card activities__card" data-aos="fade-right" data-aos-delay="400">
             <img src="img/activity-2.jpeg" alt="Gymkhana club golf course" class="card__image">
             <h3 class="card__title">Gymkhana club golf course</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /card -->
-          <div class="card activities__card">
+          <div class="card activities__card" data-aos="fade-right" data-aos-delay="600">
             <img src="img/activity-3.jpeg" alt="Tamarind falls hiking trip - full day" class="card__image">
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /card -->
-          <div class="card activities__card">
+          <div class="card activities__card"  data-aos="fade-right" data-aos-delay="800">
             <img src="img/activity-4.jpeg" alt="The blue marine discovery quest" class="card__image">
             <h3 class="card__title">The blue marine discovery quest</h3>
             <button class="card__button">Book Now</button>
@@ -796,6 +797,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
