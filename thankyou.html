@@ -5,49 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Tour Plan - Hotel Booking</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=32c5cf2b-ab74-43e2-ad32-d9195076ab7a&lang=ru_RU">
-  </script>
-  <script>
-    ymaps.ready(init);
-
-    function init() {
-      var myMap = new ymaps.Map("map", {
-        center: [7.8906391, 98.29500014],
-        zoom: 16
-      }, {
-        searchControlProvider: 'yandex#search'
-      }),
-
-        // Создаем геообъект с типом геометрии "Точка".
-        myGeoObject = new ymaps.GeoObject({
-          // Описание геометрии.
-          geometry: {
-            type: "Point",
-            coordinates: [7.8906391, 98.29500014]
-          },
-          // Свойства.
-          properties: {
-            // Контент метки.
-            iconContent: '',
-            hintContent: 'DoubleTree by Hilton Phuket Banthai Resort'
-          }
-        }, {
-          // Опции.
-          // Иконка метки будет растягиваться под размер ее содержимого.
-          preset: 'islands#blueIcon',
-          // Метку можно перемещать.
-          draggable: true
-        });
-
-      myMap.geoObjects
-        .add(myGeoObject);
-    }
-  </script>
 </head>
 
 <body>
@@ -148,10 +111,11 @@
       <div class="hotel-info">
         <div class="hotel-info__text">
           <div class="hotel-wrapper">
-            <h1 class="hotel-name hotel-info__name">Сообщение отправлено!</h1>
+            <h1 class="hotel-name hotel-info__name">Message sent!</h1>
           </div>
           <!-- /.hotel-wrapper -->
-          <p class="hotel-description  hotel-info__description">Наш менеджер позвонит вам через 5 минут.</p>
+          <p class="hotel-description  hotel-info__description">Our manager will call you in 5 minutes.</p>
+          <button onclick="document.location='index.html'" class="button hotel__button">Back</button>
         </div>
         <!-- /.hotel-info__text -->
       </div>

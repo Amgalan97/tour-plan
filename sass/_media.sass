@@ -102,6 +102,7 @@
     &__additional
       grid-column: span 2
     &__legal
+      margin: 0
       grid-column: span 2
     &__contact
       &-details
@@ -373,3 +374,12 @@
   .modal
     &__dialog
       padding: 23px 30px
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 780px) and (orientation: landscape)
+  .navbar
+    &-bottom
+      &_visible
+        overflow: scroll
+  .modal
+    &__dialog
+      overflow: scroll
