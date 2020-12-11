@@ -198,6 +198,7 @@
             </div>
             <!-- /.booking -->
             <div class="map">
+              <div class="loader loader-default"></div>
               <div id="map" style="width: 100%; height: 213px"></div>
             </div>
             <!-- /.map -->
@@ -754,50 +755,13 @@
     </div>
     <!-- /.modal -->
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=32c5cf2b-ab74-43e2-ad32-d9195076ab7a&lang=ru_RU"></script>
-    <script>
-      ymaps.ready(init);
-
-      function init() {
-        var myMap = new ymaps.Map("map", {
-          center: [7.8906391, 98.29500014],
-          zoom: 16
-        }, {
-          searchControlProvider: 'yandex#search'
-        }),
-
-          // Создаем геообъект с типом геометрии "Точка".
-          myGeoObject = new ymaps.GeoObject({
-            // Описание геометрии.
-            geometry: {
-              type: "Point",
-              coordinates: [7.8906391, 98.29500014]
-            },
-            // Свойства.
-            properties: {
-              // Контент метки.
-              iconContent: '',
-              hintContent: 'DoubleTree by Hilton Phuket Banthai Resort'
-            }
-          }, {
-            // Опции.
-            // Иконка метки будет растягиваться под размер ее содержимого.
-            preset: 'islands#blueIcon',
-            // Метку можно перемещать.
-            draggable: true
-          });
-
-        myMap.geoObjects
-          .add(myGeoObject);
-      }
-    </script>
-
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/aos.js"></script>
+    <script src="js/map.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
