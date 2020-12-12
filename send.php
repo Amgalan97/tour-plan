@@ -8,19 +8,29 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
-$subscribe_email = $_POST["subscribe_email"];
+$email = $_POST["email"];
 
 // Формирование самого письма
+if ($name and $phone and $email) {
+  $title = "Новое обращение Best Tour Plan из модального окна";
+  $body = "
+  <h2>Новое обращение</h2>
+  <b>Имя:</b> $name<br>
+  <b>Телефон:</b> $phone<br>
+  <b>Email:</b> $email<br><br>
+  <b>Сообщение:</b><br>$message
+  ";
+}
 
 // Отправки сообщения из блока newsletter
-if ($subscribe_email) {
+if ($email) {
   $title = "Подписка на новости Best Tour Plan";
   $body = "
     <h2>Подписка на новости</h2>
-    <b>mail:</b> $subscribe_email<br>
+    <b>mail:</b> $email<br>
   ";
 }
-// Отправки сообщения из блока newsletter
+// Отправки сообщения из блока footer
 else {
   $title = "Новое обращение Best Tour Plan";
   $body = "
@@ -66,7 +76,11 @@ else {$result = "error";}
 }
 
 // Перенаправления на нужные страницы
-if ($subscribe_email) {
+if ($name and $phone and $email) {
+  header('Location: thankyou.html');
+}
+
+if ($email) {
   header('Location: subscribe-thankyou.html');
 }
 
