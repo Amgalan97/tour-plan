@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/lazyframe.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
   <body>
@@ -198,9 +199,7 @@
               <button data-toggle="modal" data-href="#booking-modal" class="button booking__button">View Other Options</button>
             </div>
             <!-- /.booking -->
-            <div class="map">
-              <div class="loader loader-default"></div>
-              <div id="map" style="width: 100%; height: 213px"></div>
+            <div class="map lazyframe" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2283.6911901097233!2d98.29392404477981!3d7.890084008241842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sen!2sru!4v1607798558899!5m2!1sen!2sru"  data-thumbnail="img/google-map.png" aria-hidden="false" tabindex="0">
             </div>
             <!-- /.map -->
           </div>
@@ -407,7 +406,7 @@
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
         <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
-          <input type="email" class="subscribe__input" placeholder="Your email address" name="email" required/>
+          <input type="email" class="subscribe__input" placeholder="Your email address" name="subscribe_email" required/>
           <button class="subscribe__button">
             Send
           </button>
@@ -761,8 +760,12 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/lazyframe.min.js"></script>
+    <script>
+      lazyframe('.map');
+    </script>
     <script src="js/aos.js"></script>
-    <script src="js/map.js"></script>
+    <!-- <script src="js/map.js"></script> -->
     <script src="js/main.js"></script>
   </body>
 </html>

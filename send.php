@@ -9,34 +9,26 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 $email = $_POST["email"];
+$subscribe_email = $_POST["subscribe_email"];
 
-// Формирование самого письма
-if ($name and $phone and $email) {
-  $title = "Новое обращение Best Tour Plan из модального окна";
-  $body = "
-  <h2>Новое обращение</h2>
-  <b>Имя:</b> $name<br>
-  <b>Телефон:</b> $phone<br>
-  <b>Email:</b> $email<br><br>
-  <b>Сообщение:</b><br>$message
-  ";
-}
 
-// Отправки сообщения из блока newsletter
-if ($email) {
+// Формирование самого письмаиз блока newsletter
+if ($subscribe_email) {
   $title = "Подписка на новости Best Tour Plan";
   $body = "
     <h2>Подписка на новости</h2>
-    <b>mail:</b> $email<br>
+    <b>mail:</b> $subscribe_email<br>
   ";
 }
-// Отправки сообщения из блока footer
+
+// Формирование самого письма из блока footer
 else {
   $title = "Новое обращение Best Tour Plan";
   $body = "
   <h2>Новое обращение</h2>
   <b>Имя:</b> $name<br>
-  <b>Телефон:</b> $phone<br><br>
+  <b>Телефон:</b> $phone<br>
+  <b>Email:</b> $email<br><br>
   <b>Сообщение:</b><br>$message
   ";
 }
@@ -76,11 +68,7 @@ else {$result = "error";}
 }
 
 // Перенаправления на нужные страницы
-if ($name and $phone and $email) {
-  header('Location: thankyou.html');
-}
-
-if ($email) {
+if ($subscribe_email) {
   header('Location: subscribe-thankyou.html');
 }
 
