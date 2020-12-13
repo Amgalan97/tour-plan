@@ -35,7 +35,7 @@
       margin-left: auto
     &-menu
       padding-top: 23px
-      padding-bottom: 23px
+      padding-bottom: 22px
       justify-content: space-around
       &__link
         padding-top: 22px
@@ -75,6 +75,7 @@
         max-width: 580px
         padding: 0 62px 30px
       &__button
+        top: 50%
         &--prev
           left: 0
         &--next
@@ -92,7 +93,7 @@
     padding: 73px 0 33px 0
     &__grid
       grid-template-columns: repeat(6, 1fr)
-      grid-row-gap: 40px
+      grid-row-gap: 50px
     &__logo
       width: 94px
       height: 110px
@@ -103,14 +104,17 @@
         grid-row: 1 / 2
         grid-column: span 4
         align-self: center
+        margin-left: -53px
     &__categories
       grid-row: 2 / 3
       grid-column: span 2
     &__additional
       grid-column: span 2
+      margin-left: -41px
     &__legal
       margin: 0
       grid-column: span 2
+      margin-left: 17px
     &__contact
       &-details
         grid-row: 3
@@ -131,7 +135,7 @@
   .modal
     &__dialog
       padding: 33px 50px
-@media (max-width: 768px)
+@media (max-width: 767px)
   .container
     max-width: 576px
     width: 92%
@@ -302,6 +306,8 @@
     &__input
       &-group
         flex-basis: 100%
+    &__additional
+      margin-left: -20px
   .modal
     &__dialog
       width: 80%
@@ -321,13 +327,25 @@
     &__search
       width: 245px
   .hotel
+    padding-top: 0px
+    padding-bottom: 10px
+    &-info
+      padding-top: 0
+      padding-bottom: 20px
+    &-slider
+      height: 180px
+    &-grid
+      padding-top: 18px
     &__slider
       margin-bottom: 20px
-    &-slider
-      height: 250px
+    &-reserve
+      min-height: 219px
   .booking
+    margin-bottom: 20px
     &__button
       padding: 0 45px
+  .map
+    height: 173px
   .newsletter
     &-title
       font-size: 20px
@@ -357,17 +375,25 @@
         grid-row: 2
         grid-column: 1
         flex-wrap: wrap
+        margin-left: 0
       &-links
+        flex-basis: 100%
+        justify-content: start
         margin-top: 22px
+    &__icon
+      margin-right: 10px
     &__additional
-      grid-row: 3
-      grid-column: 1
-    &__categories
       grid-row: 4
       grid-column: 1
-    &__legal
+      margin-left: 0
+    &__categories
       grid-row: 5
       grid-column: 1
+      margin-left: 0
+    &__legal
+      grid-row: 3
+      grid-column: 1
+      margin-left: 0
     &__contact
       &-details
         grid-row: 6
@@ -396,6 +422,9 @@
 @media (max-width: 321px)
   .container
     width: 280px
+  .hotel
+    &-slider
+      height: 180px
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 780px) and (orientation: landscape)
   .navbar

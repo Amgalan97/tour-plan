@@ -82,9 +82,9 @@ $(document).ready(function () {
   };
 
   // Обработка форм
-  $(".form").each(function () {
+  $(".modal__form").each(function () {
     $(this).validate({
-    errorClass: "invalid",
+    errorClass: "modal__error",
     messages: {
       name: {
         required: "Please enter your name",
@@ -110,6 +110,22 @@ $(document).ready(function () {
         email: "Your email address must be in the format of name@domain.com"
       },
     },
+  });
+  });
+
+  $(".footer__form").each(function () {
+    $(this).validate({
+    errorClass: "footer__error",
+    messages: {
+      name: {
+        required: "Please enter your name",
+        minlength: "The name must be at least 2 characters long"
+       },
+      email: {
+        required: "We need your email address to contact you",
+        email: "Your email address must be in the format of name@domain.com"
+        },
+      },
   });
   });
 
